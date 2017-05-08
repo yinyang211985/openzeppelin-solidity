@@ -12,7 +12,7 @@ contract('Destructible', function(accounts) {
     await destructible.destroy({from: owner});
     let newBalance = web3.eth.getBalance(owner);
 
-    assert.isTrue(newBalance > initBalance);
+    assert.isTrue(newBalance.greaterThan(initBalance));
   });
 
 });

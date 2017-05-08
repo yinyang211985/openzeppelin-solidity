@@ -12,7 +12,7 @@ contract('TokenDestructible', function(accounts) {
     let initBalance = web3.eth.getBalance(owner);
     await destructible.destroy([], {from: owner});
     let newBalance = web3.eth.getBalance(owner);
-    assert.isTrue(newBalance > initBalance);
+    assert.isTrue(newBalance.greaterThan(initBalance));
   });
 
   it('should send tokens to owner after destruction', async function() {
