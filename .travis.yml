@@ -1,4 +1,4 @@
-dist: trusty
+os: windows
 sudo: false
 group: beta
 language: node_js
